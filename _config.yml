@@ -25,3 +25,12 @@ defaults:
     values:
       layout: docs
       archiveserver: "http://54.71.194.30"
+  -
+    scope:
+      path: "datacenter/ucp/2.1"
+    values:
+      ucpversion: "2.1"
+  - scope:
+      path: "datacenter/ucp/1.0"
+    values:
+      ucpversion: "1.0"
