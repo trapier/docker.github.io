@@ -86,7 +86,7 @@ can run:
 docker service create \
   --publish target=80,published=8000 \
   --network ucp-hrm \
-  --label com.docker.ucp.mesh.http=external_route=http://wordpress.example.org,internal_port=80 \
+  --label com.docker.ucp.mesh.http.80-1=internal_port=8000,external_route=http://wordpress.example.com \
   --name wordpress \
   wordpress:latest
 ```
@@ -123,7 +123,7 @@ The label syntax looks like this:
 com.docker.ucp.mesh.http[.label-number]=<key-1>=<value-1>,<key-2>=<value-2>
 ```
 
-Where `.label-number` is an optional number that you can include in your label
+Where `.label-number` is an optional suffix that you can include in your label
 name if you want to have multiple routes to the same service. As an example
 you could have one route for HTTP and another for HTTPS. In that case you'd
 apply two labels:
