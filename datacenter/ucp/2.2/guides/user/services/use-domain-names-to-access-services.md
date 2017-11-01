@@ -123,14 +123,14 @@ The label syntax looks like this:
 com.docker.ucp.mesh.http[.label-number]=<key-1>=<value-1>,<key-2>=<value-2>
 ```
 
-Where `.label-number` is an optional suffix that you can include in your label
-name if you want to have multiple routes to the same service. As an example
-you could have one route for HTTP and another for HTTPS. In that case you'd
-apply two labels:
+Where `.label-number` is an optional arbitrary suffix that you can include in
+your label name if you want to have multiple routes to the same service. As an
+example you could have one route for HTTP and another for HTTPS. In that case
+you'd apply two labels:
 
 ```none
-com.docker.ucp.mesh.http.1=<key-1>=<value-1>
-com.docker.ucp.mesh.http.2=<key-1>=<value-1>
+com.docker.ucp.mesh.http.80-1=<key-1>=<value-1>
+com.docker.ucp.mesh.http.80-2=<key-1>=<value-1>
 ```
 
 The keys and values in your label are what defined the route configuration.
