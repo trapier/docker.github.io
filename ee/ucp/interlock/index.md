@@ -67,8 +67,7 @@ Layer 7 routing in UCP supports:
 * **Context-based routing**: Interlock supports advanced application request routing by context or path.
 * **Host mode networking**: By default, layer 7 routing leverages the Docker Swarm routing mesh, but Interlock supports running proxy and application services in "host" mode networking, allowing you to bypass the routing mesh completely. This is beneficial if you want maximum performance for your applications.
 * **Security**: The layer 7 routing components that are exposed to the outside world run on worker nodes. Even if they are compromised, your cluster aren't.
-* **SSL**: Interlock leverages Docker Secrets to securely store and use SSL certificates for services.  Both
-SSL termination and TCP passthrough are supported.
+* **SSL**: Interlock leverages Docker Secrets to securely store and use SSL certificates for services.  Both SSL termination and TCP passthrough are supported.
 * **Blue-Green and Canary Service Deployment**: Interlock supports blue-green service deployment allowing an operator to deploy a new application while the current version is serving.  Once traffic is verified to the new application, the operator can scale the older version to zero.  If there is a problem, the operation is easily reversible.
 * **Service Cluster Support**: Interlock supports multiple extension+proxy combinations allowing for operators to partition load balancing resources for uses such as region or organization based load balancing.
 * **Least Privilege**: Interlock supports (and recommends) being deployed where the load balancing proxies do not need to be colocated with a Swarm manager.  This makes the deployment more secure by not exposing the Docker API access to the extension or proxy services.
